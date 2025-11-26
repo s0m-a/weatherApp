@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 92%;
+    --foreground: 220 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    /* Primary: Sky blue */
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Soft cloud gray */
+    --secondary: 210 20% 92%;
+    --secondary-foreground: 220 15% 20%;
+
+    /* Muted: Light sky */
+    --muted: 210 30% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent: Warm sunset orange */
+    --accent: 25 95% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 100% 56%;
+
+    --radius: 1rem;
+
+    /* Custom weather gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(210 100% 92%) 0%, hsl(210 100% 98%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100% / 0.95) 0%, hsl(210 40% 99% / 0.95) 100%);
+    --shadow-soft: 0 4px 20px -2px hsl(210 40% 70% / 0.15);
+    --shadow-card: 0 8px 30px -4px hsl(210 40% 60% / 0.12);
+  }
+  .dark {
+    /* Night sky palette */
+    --background: 220 25% 12%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 16%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 16%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary: Bright sky blue for dark mode */
+    --primary: 210 90% 60%;
+    --primary-foreground: 220 25% 12%;
+
+    /* Secondary: Dark slate */
+    --secondary: 220 18% 22%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted: Deep night */
+    --muted: 220 18% 20%;
+    --muted-foreground: 215 15% 65%;
+
+    /* Accent: Sunset glow */
+    --accent: 25 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 18% 24%;
+    --input: 220 18% 24%;
+    --ring: 210 90% 60%;
+
+    /* Dark mode gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(220 25% 14%) 0%, hsl(230 30% 18%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(220 20% 17% / 0.95) 0%, hsl(220 22% 19% / 0.95) 100%);
+    --shadow-soft: 0 4px 20px -2px hsl(220 40% 8% / 0.4);
+    --shadow-card: 0 8px 30px -4px hsl(220 40% 6% / 0.5);
+  }
+}
+
+
+body {
+  @apply bg-background text-foreground;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
