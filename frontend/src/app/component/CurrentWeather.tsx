@@ -56,13 +56,13 @@ export default function CurrentWeather({lat, lon, locationName,unit}: WeatherPro
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full mt-6">
           <Details
-            icon={<CiTempHigh size={20} color={colors.primary} />}
+            icon={<CiTempHigh size={20} color={`${theme.light.primary}`} />}
             label={"Feels like"}
             value={`${weather?.temperature_2m ?? "N/A"} ${currentUnits?.temperature_2m}`}
           />
 
           <Details
-            icon={<LuDroplets size={20} color={colors.primary} />}
+            icon={<LuDroplets size={20} color={`${theme.light.primary}`} />}
             label={"Humidity"}
             value={`${weather?.relative_humidity_2m ?? "N/A"} ${currentUnits?.relative_humidity_2m}`}
           />
